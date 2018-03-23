@@ -40,17 +40,58 @@ int main () {
 
 	if (to_do == 'E') {
 		
+		ifstream key("key.dat");
+		char encryptedStr[500];
+		
 		cout << "Enter the message you want to encrypt: ";
 		cin >>  msg;
+	{
+		
+		int i;
+		for (i = 0; i < msg.length(); i++)
+		{
+			key >> keychar;
+			char c = encrypt(msg[i], keychar);
+			encryptedStr[i] = c;
+		}
+		encryptedStr[i] = 0;
+		cout << encryptedStr<<endl;
+	}
+	key.close();
+
+		
 	}
 	else if (to_do == 'D'){
+		
+		ifstream key("key.dat");
+		//char decryptedStr[500];
+		string secr_msg;
+		
 		cout << "Enter the message you want to decrypt: ";
 		cin >>  msg;
+		
+	{
+		char decryptedStr[500];
+		int i;
+		for (i = 0; i < msg.length(); i++)
+		{
+		key >> keychar;
+			char c = decrypt(secr_msg[i], keychar);
+			decryptedStr[i] = c;
+		}
+		decryptedStr[i] = 0;
+		cout << decryptedStr;
+	}
+
+		
+	key.close();
+		
 	}
 	else {
     cout << "Wrong value, try again. ";
 	 }
 	
+
 	
 	// int encrypt;
 	
