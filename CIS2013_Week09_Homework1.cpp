@@ -49,7 +49,119 @@ int main () {
 	//cout << "Enter your message: ";
 	//cout << endl;
 	
-	
+	for (int i=0; i<msg.length(); i++) {
+
+if (msg[i] = 'a') {
+				a=1;
+				
+				}
+				else if (msg[i]=='b') {
+				b=2;
+				
+				}
+				else if (msg[i]=='c') {
+				c=3;
+				
+				}
+				else if (msg[i]=='d') {
+				d=4;
+				
+				}
+				else if (msg[i]=='e') {
+				e=5;
+				
+				}
+				else if (msg[i]=='f') {
+				f=6;
+				
+				}
+				else if (msg[i]=='g') {
+				g=7;
+				
+				}
+				else if (msg[i]=='h') {
+				h=8;
+				
+				}
+				else if (msg[i]=='i') {
+				i=9;
+				
+				}
+				else if (msg[i]=='j') {
+				j=10;
+				
+				}
+				else if (msg[i]=='k') {
+				k=11;
+				
+				}
+				else if (msg[i]=='l') {
+				l=12;
+				
+				}
+				else if (msg[i]=='m') {
+				m=13;
+				
+				}
+				else if (msg[i]=='n') {
+				n=14;
+				
+				}
+				else if (msg[i]=='o') {
+				o=15;
+				
+				}
+				else if (msg[i]=='p') {
+				p=16;
+				
+				}
+				else if (msg[i]=='q') {
+				q=17;
+				
+				}
+				else if (msg[i]=='r') {
+				r=18;
+				
+				}
+				else if (msg[i]=='s') {
+				s=19;
+				
+				}
+				else if (msg[i]=='t') {
+				t=20;
+				
+				}
+				else if (msg[i]=='u') {
+				u=21;
+				
+				}
+				else if (msg[i]=='v') {
+				v=22;
+				
+				}
+				else if (msg[i]=='w') {
+				w=23;
+				
+				}
+				else if (msg[i]=='x') {
+				x=24;
+				
+				}
+				else if (msg[i]=='y') {
+				y=25;
+				
+				}
+				else if (msg[i]=='z') {
+				z=26;
+				
+				}
+				// else if (msg [i]==' ') {
+				// ' '=27;
+				
+				// }
+				
+		
+}
 	
 while (key>>symb){
 			
@@ -164,8 +276,15 @@ while (key>>symb){
 				// }
 				
 		}
+	int encr;
 	
+	for(int i=0; i<=msg.length(); i++) {
+	for(int y=0; y<500; y++) {
+		key[y]+msg[i]= encr;
+	}
 	
+}
+cout << encr;
 	
 	
 	return 0;
