@@ -42,12 +42,14 @@ int main () {
 		cout << "Enter the message you want to decrypt: ";
 		cin >>  msg;
 	}
-	// else {
-	// cout << "Wrong value, try again. ";
-	// }
+	else {
+    cout << "Wrong value, try again. ";
+	 }
 	
 	//cout << "Enter your message: ";
 	//cout << endl;
+	
+	
 	
 while (key>>symb){
 			
