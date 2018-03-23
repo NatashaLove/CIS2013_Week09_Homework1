@@ -54,7 +54,7 @@ int main () {
 			char c = encrypt(msg[i], keychar);
 			encryptedStr[i] = c;
 		}
-		encryptedStr[i] = 0;
+		//encryptedStr[i] = 0;
 		cout << encryptedStr<<endl;
 	}
 	key.close();
@@ -64,16 +64,16 @@ int main () {
 	else if (to_do == 'D'){
 		
 		ifstream key("key.dat");
-		//char decryptedStr[500];
+		char decryptedStr[500];
 		string secr_msg;
 		
 		cout << "Enter the message you want to decrypt: ";
-		cin >>  msg;
+		cin >>  secr_msg;
 		
 	{
 		char decryptedStr[500];
 		int i;
-		for (i = 0; i < msg.length(); i++)
+		for (i = 0; i < secr_msg.length(); i++)
 		{
 		key >> keychar;
 			char c = decrypt(secr_msg[i], keychar);
