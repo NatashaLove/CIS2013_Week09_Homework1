@@ -6,6 +6,9 @@ using namespace std;
 char encrypt(char input, char keychar);
 char decrypt(char input, char keychar);
 
+void encr ();
+void decr ();
+
 int main () {
 	
 	ifstream key;
@@ -31,82 +34,33 @@ int main () {
 		cout << "Something went wrong with " << f_name << endl;
 		exit(1);
 } 
+	do {
 	cout << "Do you want to encrypt or decrypt a message? Enter: E or D accordingly. ";
 	cout << endl;
 	cin >> to_do;
 	cin.ignore(1000,'\n');
-
+	cout << endl;
+	
 	if (to_do == 'E') {
 		
-		ifstream key("key.dat");
-		char encryptedStr[500];
-		
-		cout << "Enter the message you want to encrypt: ";
-		getline(cin, msg);
-	{
-		
-		int i;
-		for (i = 0; i < msg.length(); i++)
-		{
-			
-			while (1) 				{ 
-			key >> keychar;
-			
-			if (keychar == ' ' || (keychar >= 'a' && keychar <= 'z')) 	
-				break; 				} 
-			char c = encrypt(msg[i], keychar);
-			encryptedStr[i] = c;
-			
-		}
-		encryptedStr[i] = 0;
-		cout << encryptedStr<<endl;
-	}
-	key.close();
-
-		
+		encr ();
 	}
 	else if (to_do == 'D'){
 		
-		ifstream key("key.dat");
-		char decryptedStr[500];
-		string secr_msg;
-		
-		cout << "Enter the message you want to decrypt: ";
-		getline(cin, secr_msg); 
-		
-	{
-		//char decryptedStr[500];
-		int i;
-		for (i = 0; i < secr_msg.length(); i++)
-		{
-			
-			while (1) 				{ 
-		key >> keychar;
-		
-		if (keychar == ' ' || (keychar >= 'a' && keychar <= 'z')) 		
-			break; 				} 		
-		//if (secr_msg[i] == 0) break; 
-		
-			char c = decrypt(secr_msg[i], keychar);
-			decryptedStr[i] = c;
-		}
-		decryptedStr[i] = 0;
-		cout << decryptedStr;
-	}
-
-		
-	key.close();
-		
+		decr ();
 	}
 	else {
     cout << "Wrong value, try again. ";
+	cout << endl;
+	
 	 }
+	} while (1);
 	
 
-	//cin >> input; 
-	return 0;
-}
+return 0;
 
+}
+	
 char encrypt(char input, char keychar) {
 	char x, y;
 
@@ -138,3 +92,85 @@ char decrypt(char input, char keychar)
 	if (!R) return ' ';
 	return R + 'a' - 1;
 }
+
+
+void encr () {
+	
+	char f_name;
+	char to_do;
+	string msg;
+	char input;
+	char keychar;
+	
+	ifstream key("key.dat");
+		char encryptedStr[500];
+		
+		cout << "Enter the message you want to encrypt: ";
+		getline(cin, msg);
+	{
+		
+		int i;
+		for (i = 0; i < msg.length(); i++)
+		{
+			
+			while (1) 				{ 
+			key >> keychar;
+			
+			if (keychar == ' ' || (keychar >= 'a' && keychar <= 'z')) 	
+				break; 				} 
+			char c = encrypt(msg[i], keychar);
+			encryptedStr[i] = c;
+			
+		}
+		encryptedStr[i] = 0;
+		cout << encryptedStr<<endl;
+		cout<< endl;
+	}
+	key.close();
+}
+
+void decr (){
+	
+	char f_name;
+	char to_do;
+	string msg;
+	char input;
+	char keychar;
+	
+	ifstream key("key.dat");
+		char decryptedStr[500];
+		string secr_msg;
+		
+		cout << "Enter the message you want to decrypt: ";
+		getline(cin, secr_msg); 
+		
+	{
+	
+		int i;
+		for (i = 0; i < secr_msg.length(); i++)
+		{
+			
+			while (1) 				{ 
+		key >> keychar;
+		
+		if (keychar == ' ' || (keychar >= 'a' && keychar <= 'z')) 		
+			break; 				} 		
+		
+		
+			char c = decrypt(secr_msg[i], keychar);
+			decryptedStr[i] = c;
+		}
+		decryptedStr[i] = 0;
+		cout << decryptedStr;
+		cout << endl;
+	}
+
+		
+	key.close();
+}
+	
+	
+
+
+
+
