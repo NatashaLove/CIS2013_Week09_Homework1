@@ -38,7 +38,7 @@ int main () {
 	cout << "Do you want to encrypt or decrypt a message? Enter: E or D accordingly: ";
 	cout << endl;
 	cin >> to_do;
-	cin.ignore(1,'\n');
+	cin.ignore(50,'\n');
 	cout << endl;
 	
 	if (to_do == 'E') {
