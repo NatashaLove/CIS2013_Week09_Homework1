@@ -34,6 +34,7 @@ int main () {
 	cout << "Do you want to encrypt or decrypt a message? Enter: E or D accordingly. ";
 	cout << endl;
 	cin >> to_do;
+	cin.ignore(1000,'\n');
 
 	if (to_do == 'E') {
 		
@@ -48,15 +49,15 @@ int main () {
 		for (i = 0; i < msg.length(); i++)
 		{
 			
-			//while (1) 				{ 
+			while (1) 				{ 
 			key >> keychar;
 			
-			//if (keychar == ' ' || (keychar > 'a' && keychar < 'z')) {		
-				//break; 				} 
+			if (keychar == ' ' || (keychar > 'a' && keychar < 'z')) {		
+				break; 				} 
 			char c = encrypt(msg[i], keychar);
 			encryptedStr[i] = c;
-		//	}
-		//	}
+			}
+			
 		}
 		encryptedStr[i] = 0;
 		cout << encryptedStr<<endl;
