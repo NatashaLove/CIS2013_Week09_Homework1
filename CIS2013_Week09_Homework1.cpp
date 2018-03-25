@@ -49,14 +49,15 @@ int main () {
 		for (i = 0; i < msg.length(); i++)
 		{
 			
-			while (1) 				{ 
+			//while (1) 				{ 
 			key >> keychar;
 			
-			if (keychar == ' ' || (keychar > 'a' && keychar < 'z')) {		
-				break; 				} 
+			//if (keychar == ' ' || (keychar > 'a' && keychar < 'z')) {		
+			//	break; 				} 
 			char c = encrypt(msg[i], keychar);
 			encryptedStr[i] = c;
-			}
+			//}
+		//}
 			
 		}
 		encryptedStr[i] = 0;
