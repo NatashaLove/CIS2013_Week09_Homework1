@@ -68,7 +68,7 @@ int main () {
 		cin >>  secr_msg;
 		
 	{
-		//char decryptedStr[500];
+		char decryptedStr[500];
 		int i;
 		for (i = 0; i < secr_msg.length(); i++)
 		{
