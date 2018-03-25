@@ -52,7 +52,7 @@ int main () {
 			while (1) 				{ 
 			key >> keychar;
 			
-			if (keychar == ' ' || (keychar > 'a' && keychar < 'z')) 	
+			if (keychar == ' ' || (keychar >= 'a' && keychar <= 'z')) 	
 				break; 				} 
 			char c = encrypt(msg[i], keychar);
 			encryptedStr[i] = c;
@@ -83,9 +83,9 @@ int main () {
 			while (1) 				{ 
 		key >> keychar;
 		
-		if (keychar == ' ' || (keychar > 'a' && keychar < 'z')) 		
+		if (keychar == ' ' || (keychar >= 'a' && keychar <= 'z')) 		
 			break; 				} 		
-		if (secr_msg[i] == 0) break; 
+		//if (secr_msg[i] == 0) break; 
 		
 			char c = decrypt(secr_msg[i], keychar);
 			decryptedStr[i] = c;
@@ -103,7 +103,7 @@ int main () {
 	 }
 	
 
-	cin >> input; 
+	//cin >> input; 
 	return 0;
 }
 
