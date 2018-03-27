@@ -12,16 +12,18 @@ void decr ();
 int main () {
 	
 	ifstream key;
-	char f_name;
+	string f_name="key.dat";
 	char to_do;
 	string msg;
 	char input;
 	char keychar;
 	
-	cout << "Hello! Enter the key file number (1, 2, 3)" << endl;
-	cin >> f_name;
+	cout<< "____________________________________________"<<endl;
+	cout << endl;
+	cout << "Hello! Enter the file name (key.dat)" << endl;
+	getline (cin, f_name);
 	
-	if (f_name=='1') {
+	if (f_name=="key.dat"){
 	key.open("key.dat"); 
 	}else
 	{ 
