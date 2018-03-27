@@ -18,7 +18,7 @@ int main () {
 	char input;
 	char keychar;
 	
-	cout<< "____________________________________________"<<endl;
+	cout<< "*******____________________________________________*******"<<endl;
 	cout << endl;
 	cout << "Hello! Enter the file name (key.dat)" << endl;
 	getline (cin, f_name);
@@ -37,6 +37,7 @@ int main () {
 		exit(1);
 } 
 	do {
+	cout<<endl;
 	cout << "Do you want to encrypt or decrypt a message? Enter: E or D accordingly: ";
 	cout << endl;
 	cin >> to_do;
