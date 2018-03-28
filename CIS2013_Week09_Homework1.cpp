@@ -108,7 +108,7 @@ void encr () {
 	ifstream key("key.dat");
 		char encryptedStr[500];
 		
-		cout << "Enter the message you want to encrypt, avoiding capital letters and punctuation characters and numeric symbols: ";
+		cout << "Enter the message you want to encrypt, avoiding capital letters and punctuation characters and numeric symbols: " << endl;
 		getline(cin, msg);
 	{
 		
@@ -144,7 +144,7 @@ void decr (){
 		char decryptedStr[500];
 		string secr_msg;
 		
-		cout << "Enter the message you want to decrypt: ";
+		cout << "Enter the message you want to decrypt: "<< endl;
 		getline(cin, secr_msg); 
 		
 	{
